@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors and Selectors Demo</title>
+    
+    <!-- CSS can be added directly in HTML using the <style> tag -->
+    <!-- This is called "internal CSS" -->
+    <style>
+      /* CSS BASICS LESSON */
+      
+      /* 1. CLASS SELECTOR (.) - Can be reused on many elements
+         This style will apply to ALL elements with class="box" */
+      .box {
+        /* CSS properties are written as property: value; */
+        width: 200px;
+        height: 200px;
+      }
+
+      /* 2. MULTIPLE CLASSES
+         Elements can have multiple classes! Here we target elements 
+         that have BOTH class="box" AND class="box-blue" */
+      .box-blue {
+        /* Colors can be written as color names */
+        color: white;            /* This sets the text color */
+        background-color: #0000ff;  /* This sets the background */
+      }
+
+      /* 3. HEX COLORS
+         Colors can be written as hex codes (#RRGGBB) 
+         #ffa500 is the hex code for orange */
+      .box-orange {
+        color: #0000ff;          /* Blue text */
+        background-color: #ffa500;  /* Orange background */
+      }
+
+      /* 4. ID SELECTOR (#) - Must be unique! 
+         This style will only apply to the element with id="box-yellow" */
+      #box-yellow {
+        /* Colors can also be written as color names */
+        color: purple;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Example 1: Using a single class -->
+    <!-- This section has class="box box-orange" so it gets styles from BOTH .box AND .box-orange -->
+    <section class="box box-orange">
+      <h2>Orange</h2>
+    </section>
+
+    <!-- Example 2: Multiple classes -->
+    <section class="box box-blue">
+      <h2>Blue</h2>
+    </section>
+
+    <!-- Example 3: Reusing classes -->
+    <!-- Notice we can reuse the same classes on multiple elements -->
+    <section class="box box-orange">
+      <h2>Orange</h2>
+    </section>
+   
+    <section class="box box-blue">
+      <h2>Blue</h2>
+    </section>
+
+    <!-- Example 4: Using an ID -->
+    <!-- IDs must be unique - only use each ID once! -->
+    <section class="box" id="box-yellow">
+      <h2>Yellow</h2>
+    </section>
+  </body>
+</html>

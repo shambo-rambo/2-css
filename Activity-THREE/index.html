@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+   <meta charset="UTF-8">
+   <title>Student Bio</title>
+   <style>
+     /* Base class - all elements with class="box" get these styles 
+        This shows basic box dimensions and font styling */
+     .box {
+       width: 200px;          /* Sets fixed width */
+       height: 100px;         /* Sets fixed height */
+       /* Font fallbacks: tries first font, moves to next if not available */
+       font-family: "Comic Sans MS", cursive, sans-serif;
+     }
+
+     /* Elements with class="section-blue" get these additional styles
+        Shows text alignment and color properties */
+     .section-blue {
+       line-height: 100px;    /* Centers text vertically by matching height */
+       color: #ffa500;        /* Orange text using hex code */
+       background-color: #0000FF;  /* Blue background using hex code */
+     }
+     
+     /* Container class shows contrast with different font and colors */
+     .container {
+       /* Different font family with fallbacks */
+       font-family: "Lucida Console", Monaco, monospace;
+       color: white;          /* White text on black background */
+       background-color: black;
+     }
+
+     /* ID selectors are more specific than classes
+        #section-1 will override any class styles */
+     #section-1 {
+       font-size: 26px;       /* Makes text larger */
+       color: #ffff00;        /* Yellow text using hex */
+       background-color: #800080;  /* Purple background using hex */
+     }
+
+     /* Simple color change for section 6 */
+     #section-6 {
+       color: #ffff00;        /* Yellow text */
+     }
+   </style>
+ </head>
+
+ <body>
+   <!-- Example 1: Using both class and ID 
+        section-1 ID styles will override box class styles -->
+   <section class="box" id="section-1">
+     <h2>Section 1</h2>
+   </section>
+
+   <!-- Example 2: Multiple classes
+        Gets styles from both .box and .section-blue -->
+   <section class="box section-blue">
+     <h2>Section 2</h2>
+   </section>
+
+   <!-- Example 3: Reusing the same classes -->
+   <section class="box section-blue">
+     <h2>Section 3</h2>
+   </section>
+
+   <!-- Example 4: Container with nested sections -->
+   <div class="container">
+     <!-- These sections inherit container styles -->
+     <section>
+       <h2>Section 4</h2>
+     </section>
+ 
+     <section>
+       <h2>Section 5</h2>
+     </section>
+ 
+     <!-- Section 6 gets container styles plus its own ID styles -->
+     <section id="section-6">
+       <h2>Section 6</h2>
+     </section>
+   </div>
+ </body>
+</html>
