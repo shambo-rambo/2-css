@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
   <head>
     <meta charset="UTF-8">
     <title>HTML Bio</title>
+    <!-- CSS styles are defined in the <style> tag within <head> -->
     <style>
+      /* A class selector starts with a period (.) 
+         This style will apply to any element with class="lesson" */
       .lesson  {
         background-color: lemonchiffon;
       }
 
+      /* An ID selector starts with a hashtag (#)
+         IDs must be unique - only one element can have each ID
+         This targets the element with id="paragraph-1" */
       #paragraph-1 {
+        /* color property sets the text color */
         color: darkslateblue;
+        /* background-color sets the background color of just this element */
         background-color: white;
       }
 
+      /* Styling for the second paragraph */
       #paragraph-2 {
         color: darkslateblue;
         background-color: darkorange;
       }
 
+      /* Styling for the third paragraph
+         Notice how we can create contrast by using light text on dark backgrounds */
       #paragraph-3 {
         color: white;
         background-color: darkslateblue;
       }
     </style>
   </head>
-
   <body>
+    <!-- div with class="container" can be styled using .container in CSS -->
     <div class="container">
       <header>
         <h1>HTML Attributes</h1>
       </header>
-
+      <!-- This section uses the .lesson class defined above -->
       <section class="lesson">
         <h2>Image and Link Attributes</h2>
         <h4>are used to configure or adjust behavior of specific elements</h4>
@@ -41,17 +51,16 @@
         <br>
         <a href="https://www.google.com">This is a link to Google.com</a>
       </section>
-
+      <!-- This section also uses the .lesson class, showing how classes can be reused -->
       <section class="lesson">
         <h2>Global Attributes</h2>
         <h3>can be used on any element and are often used to identify element for styling</h3>
+        <!-- Each paragraph has a unique ID, allowing individual styling -->
         <p id="paragraph-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         <p id="paragraph-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         <p id="paragraph-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         <br>
       </section>
-
     </div>
   </body>
-
 </html>
